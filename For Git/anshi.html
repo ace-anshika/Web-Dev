@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Royal Chess</title>
+   <link rel="stylesheet" href="css/anshi.css">
+</head>
+   
+<body>
+    <!-- Header with Nav Bar -->
+    <header>
+        <h1>Royal Chess</h1>
+        <nav>
+            <ul>
+                <li><a href="#overview">Game Overview</a></li>
+                <li><a href="#highlights">Game Highlights</a></li>
+                <li><a href="#get-started">How to Get Started</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Game Overview -->
+    <section id="overview">
+        <h2>Game Overview</h2>
+        <p>Chess is a two-player strategy board game played on a checkered board with 64 squares arranged in an 8×8 grid. The game is believed to have originated in India in the 6th century and was later spread to Persia, Europe, and the rest of the world. Chess is recognized as a game of skill and mental prowess.</p>
+        <p>The objective of chess is to checkmate the opponent's king. This occurs when the king is under immediate attack (in "check") and there is no way for it to escape capture on the next move.</p>
+        <div class="image-container">
+            <img src="img/maxresdefault.jpg" alt="Chess Highlights">
+        </div>
+    </section>
+
+    <!-- Game Highlights -->
+    <section id="highlights">
+        <h2>Game Highlights</h2>
+        <h3>Memorable Moments</h3>
+        <p>Chess has a rich history with many memorable moments, such as the 1972 World Chess Championship between Bobby Fischer and Boris Spassky, the rise of Garry Kasparov, and the emergence of Magnus Carlsen as a dominant player in the 21st century.</p>
+        <h3>Key Players</h3>
+        <p>Key players in the history of chess include Vishwanathan Anand, Praggnanandhaa R., Hikaru Nakamura, Magnus Carlsen, and the current World Champion Ding Liren.</p>
+        <h3>Important Tournaments</h3>
+        <p>Important tournaments in the world of chess include the World Chess Championship, the Candidates Tournament, and prestigious opens such as the Tata Steel Chess Tournament and the Chess Olympiad.</p>
+        <div class="image-container">
+            <img src="img/cal.jpg" alt="Chess Highlights">
+        </div>
+    </section>
+
+    <!-- How to Get Started -->
+    <section id="get-started">
+        <h2>How to Get Started</h2>
+        <p>Getting started with chess is both exciting and straightforward. Begin by learning the basics: understand the 8x8 chessboard, the movement of each piece (King, Queen, Rooks, Bishops, Knights, and Pawns), and the primary objective of checkmating your opponent's king. Equip yourself with a chessboard and pieces, either physical or digital, and optionally a chess clock for timed games. Familiarize yourself with basic rules and strategies, such as opening principles, piece development, and controlling the center. Many online resources, tutorials, and apps can help you practice and improve. Remember, consistent practice and studying classic games will enhance your skills over time. Beginners should focus on learning the basic moves, understanding the value of pieces, and practicing tactics.</p>
+        <div class="image-container">
+            <img src="img/w.jpg" alt="Chess Highlights">
+        </div>
+
+    </section>
+    <section id="quiz">
+        <h2>Chess Quiz</h2>
+        <p>Test your chess knowledge with this quick quiz!</p>
+        <div id="quiz-container">
+            <p id="question"></p>
+            <div id="choices"></div>
+            <button id="submit-btn" onclick="submitAnswer()">Submit</button>
+            <p id="feedback"></p>
+        </div>
+    </section>
+    
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Royal Chess</p>
+        <p><a href="https://aicf.in/">India Chess Federation</a> | <a href="https://www.chess.com/forums">Chess.com Forums</a></p>
+    </footer>
+
+    <script>
+        const quizData = {
+            question: "What is the objective of chess?",
+            choices: [
+                "Capture all opponent's pieces",
+                "Control the center of the board",
+                "Checkmate the opponent's king",
+                "Promote a pawn to a queen"
+            ],
+            correctAnswer: 2
+        };
+    
+        function loadQuiz() {
+            document.getElementById('question').innerText = quizData.question;
+            const choicesContainer = document.getElementById('choices');
+            choicesContainer.innerHTML = '';
+            quizData.choices.forEach((choice, index) => {
+                const choiceLabel = document.createElement('label');
+                const choiceInput = document.createElement('input');
+                choiceInput.type = 'radio';
+                choiceInput.name = 'choice';
+                choiceInput.value = index;
+                choiceLabel.appendChild(choiceInput);
+                choiceLabel.appendChild(document.createTextNode(choice));
+                choicesContainer.appendChild(choiceLabel);
+                choicesContainer.appendChild(document.createElement('br'));
+            });
+        }
+    
+        function submitAnswer() {
+            const choices = document.getElementsByName('choice');
+            let selectedChoice;
+            for (const choice of choices) {
+                if (choice.checked) {
+                    selectedChoice = parseInt(choice.value);
+                    break;
+                }
+            }
+    
+            const feedback = document.getElementById('feedback');
+            if (selectedChoice === quizData.correctAnswer) {
+                feedback.innerText = "Correct!";
+                feedback.style.color = 'green';
+            } else {
+                feedback.innerText = "Incorrect. The correct answer is 'Checkmate the opponent's king'.";
+                feedback.style.color = 'red';
+            }
+        }
+    
+        document.addEventListener('DOMContentLoaded', loadQuiz);
+    </script>
+    
+</body>
+</html>
