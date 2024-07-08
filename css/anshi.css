@@ -1,0 +1,147 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #7c0000;
+}
+
+header {
+    background-color: rgb(138, 0, 0);;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+    padding: 10px;
+    font-size: 3.5em;
+}
+
+nav {
+    background-color: rgba(138, 0, 0,);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0);
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+}
+
+nav ul li a:hover {
+    background-color: #b7ba0c;
+    border-radius: 5px;
+}
+
+section {
+    padding: 100px;
+    margin-right: 500px;
+    margin-left: 500px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2{
+    color: rgb(174, 0, 0);
+
+} 
+h3 {
+    color: #b61515;
+    margin-top: 0;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: 500px;
+    border-radius: 8px;
+}
+
+footer {
+    background-color: rgb(138, 0, 0);
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+footer a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+#quiz {
+    padding: 20px;
+    margin: 20 250px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#quiz-container {
+    margin-top: 20px;
+}
+
+#choices {
+    margin: 10px 0;
+}
+
+#choices input {
+    margin-right: 10px;
+}
+
+#submit-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#submit-btn:hover {
+    background-color: #45a049;
+}
+
+#feedback {
+    margin-top: 10px;
+    font-weight: bold;
+}
+/* Ensure adequate spacing between sections */
+section {
+    padding: 20px;
+    margin: 20px 250px; /* Adjusted margin to ensure spacing */
+}
+
+section#overview {
+    margin-top: 40px; /* Additional spacing for the first section */
+}
